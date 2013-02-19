@@ -1,0 +1,16 @@
+<h1 class='products_index_header'> Showing all <%= @products.count %> products:</h1>
+<div class='prod_container'>
+  <% @products.each do |product| %>
+
+    <div class='productbox'>
+      <div class='product_photo_box'>
+        <%= image_tag(product.prod_image, :class => 'product_photo') %>
+      </div>
+
+      <h5 ><%= link_to product.prod_name, product %></h5>
+
+
+    </div>
+  <% end %>
+</div>
+

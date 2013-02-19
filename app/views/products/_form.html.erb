@@ -1,0 +1,37 @@
+<%= form_for @product do |f| %>
+
+  <%= f.label :prod_image, 'Product image url' %>
+  <%= f.text_field :prod_image %>
+  <br>
+
+  <%= f.label :prod_name, 'Name of Product' %>
+  <%= f.text_field :prod_name %>
+  <br>
+
+  <%= f.label :prod_type, 'Type of product: ' %>
+  <%= f.select :prod_type, [['Electronic','electronic'],['Food','food'],['Shipping','shipping'], ['Household','household']] %>
+  <br>
+  <br>
+  <%= f.label :upc, 'Enter UPC code: ' %>
+  <%= f.text_field :upc %>
+  <br>
+
+  <%= f.label :description, 'Please describe why you think this packaging is wasteful' %>
+  <%= f.text_area :description %>
+  <br>
+
+  <%= f.label :company_name, 'Name of company that makes product: ' %>
+  <%= f.text_field :company_name %>
+  <br>
+
+  <%= f.label :company_twitter, 'Company twitter handle' %>
+  <%= f.text_field :company_twitter %>
+  <br>
+
+  <%= f.label :user_id, 'Submitted by: (please add yourself as a user if your name is not present)' %>
+    <%= f.select :user_id, User.all.map{ |u| [u.user_name, u.id]} %>
+
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>

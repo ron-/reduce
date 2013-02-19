@@ -1,0 +1,18 @@
+
+<div class='user_container'>
+  <h2 class='products_index_header'>Showing all <%= @users.count %> users:</h2>
+  <br>
+  <% @users.each do |user| %>
+    <div class='productbox'>
+
+      <div class='user_photo_box'>
+        <%= image_tag(user.user_image, :class => 'user_photo') %>
+      </div>
+
+      <h5 ><%= link_to user.user_name, user %></h5>
+
+
+    </div>
+  <% end %>
+</div>
+

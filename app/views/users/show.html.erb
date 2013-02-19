@@ -1,0 +1,29 @@
+<div class='userbox'>
+
+      <div class='profile_photo_box'>
+        <%= image_tag(@user.user_image, :class => 'profile_photo') %>
+      </div>
+
+      <br>
+
+      <h2><strong><%= @user.user_name %></strong></h2>
+      <p><strong>Location: </strong><%= @user.user_location %></p>
+      <p><strong>User Twitter Account: </strong><a href="http://www.twitter.com/<%= @user.user_twitter %>"><%= @user.user_twitter %></a></p>
+      <p><%= link_to 'delete', @user, :method => :delete, :confirm => 'Are you sure?' %></p>
+      <p><%= link_to 'edit', edit_user_path(@user) %>
+</div>
+
+<div class='prod_container'>
+  <% @user.products.each do |product| %>
+
+    <div class='productbox'>
+      <div class='product_photo_box'>
+        <%= image_tag(product.prod_image, :class => 'product_photo') %>
+      </div>
+
+      <h5 ><%= link_to product.prod_name, product %></h5>
+
+
+    </div>
+  <% end %>
+</div>

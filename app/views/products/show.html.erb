@@ -1,0 +1,42 @@
+<div class='prod_container'>
+
+    <div class='productbox left'>
+
+      <div class='product_photo_box'>
+        <%= image_tag(@product.prod_image, :class => 'product_photo') %>
+      </div>
+
+      <h5 ><%= @product.prod_name %></h5>
+      <p><%= link_to 'edit', edit_product_path(@product) %>   /   <%= link_to 'delete', @product, :method => :delete, :confirm => "Delete #{@product.prod_name}?" %> </p>
+
+    </div>
+
+    <div class='productbox left'>
+
+      <p><strong>Product Type: </strong><%= @product.prod_type %></p>
+      <p><strong>UPC code: </strong><%= @product.upc %></p>
+      <p><strong>Description: </strong><%= @product.description %></p>
+      <p><strong>Company Name: </strong><%= @product.company_name %></p>
+      <p><strong>Company Twitter: </strong><a href="http://www.twitter.com/<%= @product.company_twitter %>"><%= @product.company_twitter %></a></p>
+      <p><strong># of votes: </strong><%= @product.votes %></p>
+      <p><strong># of times tweeted: </strong><%= @product.num_tweets %></p>
+      <p><strong>Submitted by </strong><%= @product.user.user_name %></p>
+
+    </div>
+
+    <div class='productbox right'>
+
+      <h4>Send a tweet to <%= @product.company_name %><br>asking them to change<br>their practices</h4>
+
+      <div id='tweet_button'>
+        <a href="https://twitter.com/intent/tweet?button_hashtag=ReduceApp&text=<%= @product.company_twitter %>%20Please%20reduce%20your%20packaging%2C%20I%20find%20it%20wasteful%20and%20unnecessary%20" class="twitter-hashtag-button" data-size="large" data-url="http://reduce-app.com">Tweet #ReduceApp</a>
+      </div>
+
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+      <h4>Vote for this product <br> if you agree that <br>this packaging is wasteful</h4>
+
+    </div>
+
+</div>

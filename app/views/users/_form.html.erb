@@ -1,0 +1,20 @@
+<%= form_for @user do |f| %>
+
+  <%= f.label :user_name, 'What is your name?' %>
+  <%= f.text_field :user_name %>
+  <br>
+
+  <%= f.label :user_location, 'Where are you located?' %>
+  <%= f.text_field :user_location %>
+  <br>
+
+  <%= f.label :user_image, 'Submit an image url:' %>
+  <%= f.text_field :user_image %>
+  <br>
+
+  <%= f.label :user_twitter, 'What is your twitter handle?' %>
+  <%= f.text_field :user_twitter %>
+  <br>
+
+  <%= f.submit %>
+<% end %>
