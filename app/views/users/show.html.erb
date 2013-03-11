@@ -15,10 +15,16 @@
 
 
  <div class="row">
+    <% if @user.products.length != 0 %>
+      <div class="twelve columns border_bottom">
+        <h4><%= @user.user_name %>'s contributions to ReduceApp: </h4>
+      </div>
+    <% else %>
+      <div class="twelve columns">
+        <h4><%= @user.user_name %> has made no contributions to  ReduceApp. </h4>
+      </div>
+    <%end%>
 
-    <div class="twelve columns border_bottom">
-      <h4><%= @user.user_name %>'s contributions to ReduceApp: </h4>
-    </div>
 </div>
 
 

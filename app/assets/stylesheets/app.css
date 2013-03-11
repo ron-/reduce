@@ -27,6 +27,16 @@ body {
   margin-left: auto;
   background-color: #F2F2F2;
 }
+.logo{
+  margin: 30px 0px 30px 0px;
+}
+.index{
+  margin-top: 100px;
+  background-color: #F2F2F2;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
 
 .photoborder {
   border: 1px solid #BBB;
@@ -64,8 +74,8 @@ FRONT PAGE MAIN IMG BOX
 .big_img{
   background: url('styrofoam_cat3.jpg');
   height: 460px;
-  padding-top: 120px;
   margin-bottom: 20px;
+  margin-top: 20px;
   border-bottom: 6px solid #7f98ba;
 }
 
@@ -76,24 +86,23 @@ FRONT PAGE COPY
 */
 
 .splash_copy {
-  font-size: 3.6em;
+  font-size: 2.8em;
   font-weight: bold;
-  text-align: right;
-  letter-spacing: -.04em;
+  text-align: center;
+  letter-spacing: -.05em;
   color: #333;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 30px 0px;
   line-height: 1em;
-  padding-right: 40px;
 }
 
 .sub_copy {
   font-size: 2em;
   color: #666;
-  text-align: right;
+  text-align: center;
   letter-spacing: -.04em;
-  margin: 0px 0px 60px 0px;
+  margin-bottom: 60px;
   line-height: 1.2em;
-  padding-right: 40px;
+/*  padding-right: 40px; */
 }
 
 .twitter_feed {
@@ -197,7 +206,6 @@ FRONT PAGE COPY
   margin-bottom: .2em;
 
 }
-
 
 
 .user_container {

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130216215541) do
+ActiveRecord::Schema.define(:version => 20130311010917) do
 
   create_table "products", :force => true do |t|
     t.text     "prod_image"
@@ -33,8 +33,9 @@ ActiveRecord::Schema.define(:version => 20130216215541) do
     t.string   "user_location"
     t.text     "user_image"
     t.string   "user_twitter"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "password_digest"
   end
 
 end
